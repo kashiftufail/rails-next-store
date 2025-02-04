@@ -10,21 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_01_02_060103) do
-  create_table "posts", force: :cascade do |t|
-    t.string "title"
+ActiveRecord::Schema[8.0].define(version: 2025_01_28_142102) do
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.float "price"
     t.text "detail"
+    t.string "sku"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image_url"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "provider", default: "email", null: false
     t.string "uid", default: "", null: false
-    t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
+    t.boolean "allow_password_change", default: false
     t.datetime "remember_created_at"
     t.string "confirmation_token"
     t.datetime "confirmed_at"
@@ -33,7 +36,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_01_02_060103) do
     t.string "name"
     t.string "nickname"
     t.string "image"
-    t.boolean "allow_password_change", default: false
+    t.string "email"
     t.text "tokens"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

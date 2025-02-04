@@ -1,6 +1,6 @@
 require "test_helper"
 
-class Users::RegistrationsControllerTest < ActionDispatch::IntegrationTest
+class Api::V1::HomeControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

@@ -71,3 +71,8 @@ gem "devise_token_auth", "~> 1.2"
 gem 'rack-cors'
 
 gem "faker", "~> 3.5"
+
+gem "exception_notification", "~> 4.1"
+
+gem 'pry'
+gem 'image_processing', '~> 1.2'
